@@ -50,9 +50,14 @@ public class HeroController {
     public void updateCharacter(@PathVariable int id, @RequestBody Hero hero){
         Optional<Hero> heroToUpdate = heroRepository.findById(id);
         if(heroToUpdate.isPresent()){
+
             Hero updatedHero = heroToUpdate.get();
+
             updatedHero.setName(hero.getName());
             updatedHero.setType(hero.getType());
+            updatedHero.setHp(hero.getHp());
+            updatedHero.setPosition(hero.getPosition());
+
             switch (hero.getType()){
                 case "Paladin":
                     updatedHero.setHp(12);
