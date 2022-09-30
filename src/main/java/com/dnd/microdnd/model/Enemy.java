@@ -1,6 +1,8 @@
 package com.dnd.microdnd.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity(name = "enemy")
 public class Enemy {
@@ -14,6 +16,8 @@ public class Enemy {
     private int attack;
 
     private int playerId;
+
+
 
 
 

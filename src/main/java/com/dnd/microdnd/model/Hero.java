@@ -14,9 +14,6 @@ public class Hero {
     private int position;
     private int attack;
 
-    @ManyToOne
-    private Enemy enemy;
-
 
     //constructeur
     public Hero() {
