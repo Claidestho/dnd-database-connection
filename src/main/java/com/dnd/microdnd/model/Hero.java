@@ -12,6 +12,7 @@ public class Hero {
     private int hp;
     private String type;
     private int position;
+    private int attack;
 
     @ManyToOne
     private Enemy enemy;
@@ -72,6 +73,14 @@ public class Hero {
 
     public void setPosition(int position) {
         this.position = position;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
     }
 
 
