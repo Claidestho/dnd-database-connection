@@ -13,6 +13,8 @@ public class Enemy {
     private int position;
     private int attack;
 
+    private int playerId;
+
 
 
     public Enemy() {}
@@ -68,6 +70,14 @@ public class Enemy {
 
     public int getAttack(int attack) {return attack;}
     public void setAttack(int attack) {this.attack = attack;}
+
+    public int getPlayerId() {
+        return playerId;
+    }
+
+    public void setPlayerId(int player_id) {
+        this.playerId = player_id;
+    }
 
     @Override
     public String toString() {
