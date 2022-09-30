@@ -7,13 +7,14 @@ public class Hero {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    //attributs de la classe
     private int id;
     private String name;
     private int hp;
     private String type;
     private int position;
+
+    @ManyToOne
+    private Enemy enemy;
 
 
     //constructeur

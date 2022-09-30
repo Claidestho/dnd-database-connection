@@ -1,9 +1,6 @@
 package com.dnd.microdnd.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity(name = "enemy")
 public class Enemy {
@@ -11,18 +8,22 @@ public class Enemy {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-
     private int hp;
     private String type;
+    private int position;
+    private int attack;
+
+
 
     public Enemy() {}
 
-    public Enemy(int id, String name, String type, int hp, int position) {
+    public Enemy(int id, String name, String type, int hp, int position, int attack) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.hp = hp;
         this.position = position;
+        this.attack = attack;
     }
 
     public int getId() {
@@ -65,7 +66,8 @@ public class Enemy {
         this.position = position;
     }
 
-    private int position;
+    public int getAttack(int attack) {return attack;}
+    public void setAttack(int attack) {this.attack = attack;}
 
     @Override
     public String toString() {
